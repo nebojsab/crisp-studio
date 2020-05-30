@@ -95,9 +95,15 @@
     margin-top: 2px;
 }
 
+@media (max-width: 1024px) {
+    .carousel-arrow-icon-right {
+        margin-left: -10px;
+    }
+}
+
 // temp carousel section title rules
 
-.fav--icon {
+.icon--fav {
     position: absolute;
     right: 20px;
     top: -20px;

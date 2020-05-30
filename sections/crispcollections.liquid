@@ -1,0 +1,21 @@
+<ul class="collection--list">
+    {%- for collection in collections -%}
+    <li class="collection--list--item">
+        {%- if collection.image -%}
+        {%- assign collection_image = collection.image -%}
+        {%- elsif collection.products.first and collection.products.first.images != empty -%}
+        {%- assign collection_image = collection.products.first.featured_image -%}
+        {%- else -%}
+        {%- assign collection_image = blank -%}
+        {%- endif -%}
+
+        <img src="{{ collection_image | img_url: '1920x' }}" alt="">
+        <div class="collection--title">
+            <div>{{ collection.title }}</div>
+            <a class="collection--title-link" href="#">
+                Shop now <span>{{ 'icon-chevron-small-white.svg' | asset_url | img_tag }}</span>
+            </a>
+        </div>
+    </li>
+    {%- endfor -%}
+</ul>

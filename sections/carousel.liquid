@@ -13,7 +13,7 @@
                 <li class="slide" href="{{ product.url }}">
                     <img src="{{ product.featured_image | product_img_url: 'medium' }}" alt="">
                     <div class="slide--inner">
-                        <span class="fav--icon" onclick="chooseFav()"></span>
+                        <span id="icon--favorite" class="icon--fav"></span>
                         <span>{{ product.title }}</span>
                         <span>{{ product.price | money }}</span>
                         {% if product.tags != blank %}
