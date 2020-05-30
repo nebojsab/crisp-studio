@@ -31,9 +31,12 @@
 <body>
   {% section 'header' %}
   {% section 'hero' %}
+  {% section 'carousel' %}
   {{ content_for_layout }}
   {% section 'footer' %}
 
   {{ 'sticky.js' | asset_url | script_tag }}
+  {{ 'carousel.js' | asset_url | script_tag }}
+  <script src="../assets/carousel.js"></script>
 </body>
 </html>
