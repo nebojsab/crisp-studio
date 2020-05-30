@@ -47,11 +47,13 @@ function moveSlidesLeft() {
 window.addEventListener('resize', setScreenSize);
 
 function setScreenSize() {
-    if (window.innerWidth >= 768) {
+    if (window.innerWidth >= 1024) {
         carouselDisplaying = 4;
-    } else if (window.innerWidth <= 767) {
+    } else if (window.innerWidth >= 768) {
+        carouselDisplaying = 3;
+    } else if (window.innerWidth >= 600) {
         carouselDisplaying = 2;
-    } else if (window.innerWidth <= 414) {
+    } else if (window.innerWidth >= 414) {
         carouselDisplaying = 1;
     } else {
         carouselDisplaying = 1;

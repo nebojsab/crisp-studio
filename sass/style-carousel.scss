@@ -1,7 +1,7 @@
 .carousel {
     position: relative;
     width: 90%;
-    height: 50px;
+    height: 300px;
     margin: 0 auto;
 }
 
@@ -14,33 +14,19 @@
 
 .slide {
     height: 100%;
-    background-color: black;
     position: absolute;
     z-index: 1;
     transition: left 0.4s cubic-bezier(0.47, 0.13, 0.15, 0.89);
-}
-
-.slide-2 {
-    background-color: green;
-}
-
-.slide-3 {
-    background-color: red;
-}
-
-.slide-4 {
-    background-color: purple;
-}
-
-.slide-5 {
-    background-color: yellow;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .nav {
     position: absolute;
     top: 50%;
     margin-top: -10px;
-    background-color: rgba(150, 150, 150, 0.3);
     width: 20px;
     height: 20px;
     z-index: 2;

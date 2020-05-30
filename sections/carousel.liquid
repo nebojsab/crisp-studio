@@ -3,31 +3,29 @@
 
         <div class="carousel">
             <div class="nav nav-left">
-                <div class="ion-chevron-left carousel-arrow-icon-left"></div>
+                <div class="ion-chevron-left carousel-arrow-icon-left">
+                    {{ 'icon-chevron-yellow-left.svg' | asset_url | img_tag }}
+                </div>
             </div>
 
-            <div class="carousel-content">
+            <ul class="carousel-content">
+                {% for product in collections.favorite.products  %}
+                <li class="slide" href="{{ product.url }}">
 
-                <div class="slide slide-1">
-                    <div>cat</div>
-                </div>
-                <div class="slide slide-2">
-                    <div>dog</div>
-                </div>
-                <div class="slide slide-3">
-                    <div>mouse</div>
-                </div>
-                <div class="slide slide-4">
-                    <div>hen</div>
-                </div>
-                <div class="slide slide-5">
-                    <div>bug</div>
-                </div>
+                    <img src="{{ product.featured_image | product_img_url: 'medium' }}" alt="">
+                    <span>{{ product.title }}</span>
+                    <span>{{ product.price | money }}</span>
+                    <span>{{ product.tags }}</span>
+                    <a href="#">shop now</a>
 
-            </div>
+                </li>
+                {% endfor %}
+            </ul>
 
             <div class="nav nav-right">
-                <div class="ion-chevron-right carousel-arrow-icon-right"></div>
+                <div class="ion-chevron-right carousel-arrow-icon-right">
+                    {{ 'icon-chevron-yellow-right.svg' | asset_url | img_tag }}
+                </div>
             </div>
         </div>
 
