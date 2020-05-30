@@ -7,3 +7,9 @@ body {
 body {
     height: 2000px;
 }
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
