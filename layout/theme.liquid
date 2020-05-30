@@ -31,9 +31,11 @@
 <body>
   {% section 'header' %}
   {% section 'hero' %}
-  {% include 'divider' %}
+  <h1 class="section--title">New In</h1>
   {% section 'carousel' %}
   {{ content_for_layout }}
+  <h1 class="section--title">Best Sellers</h1>
+  {% section 'bestsellers' %}
   {% section 'footer' %}
 
   {{ 'sticky.js' | asset_url | script_tag }}

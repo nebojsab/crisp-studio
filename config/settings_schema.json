@@ -55,19 +55,5 @@
         "label": "Yellow Bar"
       }
     ]
-  },
-  {
-    "name": "Divider Bar",
-    "settings": [
-      {
-        "type": "text",
-        "id": "new_items_bar",
-        "label": "New Items Bar"
-      },{
-        "type": "text",
-        "id": "best_sellers_bar",
-        "label": "Best Sellers Bar"
-      }
-    ]
   }
 ]
