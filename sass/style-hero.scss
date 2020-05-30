@@ -1,0 +1,11 @@
+.hero {
+    position: relative;
+}
+
+.hero--cta {
+    position: absolute;
+    left: 50%;
+    margin-top: 333px;
+    display: flex;
+    flex-direction: column;
+}

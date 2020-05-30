@@ -1,0 +1,61 @@
+// Colors 
+
+$white: #fff;
+$black: #000;
+$gray: #999;
+$gray-icons: #bbb;
+$yellow: #E0FF04;
+
+// Fonts
+
+/**
+*   WORK SANS FONT
+*  text
+*/
+// @font-face {
+//     font-family: 'Work Sans';
+//     font-style: normal;
+//     font-weight: normal;
+//     font-weight: 400; 
+//     src: url('{{ "WorkSans-Regular.eot" | asset_url }}');
+//     src: url('{{ "WorkSans-Regular.eot" | asset_url }} ?#iefix') format("embedded-opentype"),
+//          url('{{ "WorkSans-Regular.woff" | asset_url }}') format("woff"),
+//          url('{{ "WorkSans-Regular.woff2" | asset_url }}') format("woff2"),
+//          url('{{ "WorkSans-Regular.ttf" | asset_url }}') format("truetype"),
+//          url('{{ "WorkSans-Regular.svg" | asset_url }} #FONT') format("svg");
+// }
+// $work-sans-regular: 'Work Sans';
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400&display=swap');
+$work-sans-regular: 'Work Sans';
+
+
+
+/**
+*  FONT AWESOME
+*  icons
+*/
+@font-face {
+    font-family: 'Font Awesome\ 5 Regular';
+    font-style: normal;
+    font-weight: normal; 
+    src: url('{{ "fa-regular-400.eot." | asset_url }}');
+    src: url('{{ "fa-regular-400.eot" | asset_url }} ?#iefix') format("embedded-opentype"),
+         url('{{ "fa-regular-400.woff" | asset_url }}') format("woff"),
+         url('{{ "fa-regular-400.woff2" | asset_url }}') format("woff2"),
+         url('{{ "fa-regular-400.ttf" | asset_url }}') format("truetype"),
+         url('{{ "fa-regular-400.svg" | asset_url }} #FONT') format("svg");
+}
+$font-awesome-regular: 'Font Awesome\ 5 Free';
+
+@font-face {
+    font-family: 'Font Awesome\ 5 Solid';
+    font-style: normal;
+    font-weight: normal; 
+    src: url('{{ "fa-solid-900.eot" | asset_url }}');
+    src: url('{{ "fa-solid-900.eot" | asset_url }} ?#iefix') format("embedded-opentype"),
+         url('{{ "fa-solid-900.woff" | asset_url }}') format("woff"),
+         url('{{ "fa-solid-900.woff2" | asset_url }}') format("woff2"),
+         url('{{ "fa-solid-900.ttf" | asset_url }}') format("truetype"),
+         url('{{ "fa-solid-900.svg" | asset_url }} #FONT') format("svg");
+}
+$font-awesome-solid: 'Font Awesome\ 5 Free';

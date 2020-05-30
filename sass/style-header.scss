@@ -1,0 +1,32 @@
+
+#header {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.header--top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header--top--item {
+    display: inline-flex;
+    flex-grow: 1;
+}
+
+.menu--list {
+    list-style: none;
+    display: inline-flex;
+}
+
+.menu--list--item {
+    margin: 0 10px;
+    font-family: $work-sans-regular;
+}

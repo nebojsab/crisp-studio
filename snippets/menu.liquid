@@ -1,0 +1,33 @@
+<section class="menu">
+    <div class="menu--container">
+        <ul class="menu--list">
+            {% for link in linklists[section.settings.main_linklist].links %}
+            {% if link.links == blank %}
+            <li class="menu--list--item">
+                <a href="{{link.url}}">{{link.title}}</a>
+            </li>
+            {% endif %}
+
+            {% if link.links != blank %}
+            <li class="menu--list--item  menu--list--item-dropdown>
+                <a href="#">
+                    Shop by brand
+                </a>
+                <div>
+                    <div>
+                        {% for childlink in link.links  %}
+                        <div>
+                            <div>{{childlink.title}}</div>
+                            {% for sublink in childlink.links %}
+                            <a href="{{sublink.url}}">{{sublink.title}}</a>
+                            {% endfor %}
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </li>
+            {% endif %}
+            {% endfor %}
+        </ul>
+    </div>
+</section>

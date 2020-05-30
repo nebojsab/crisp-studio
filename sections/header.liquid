@@ -1,0 +1,43 @@
+<section id="header" class="header">
+    <div class="header--top">
+        <div class="header--top--item">
+            <input type="text" placeholder="Search" />
+        </div>
+
+        <div class="header--top--item">
+            <a href="#">
+                <!-- replace logo here -->
+                {{ 'LOGO.svg' | asset_url | img_tag }}
+            </a>
+        </div>
+        <div class="header--top--item">
+            <ul>
+                <li><a href="#">Register</a></li>
+                <span> | </span>
+                <li><a href="#">My Account</a></li>
+            </ul>
+            <span>
+                {{ 'WISHLIST_ICON.svg' | asset_url | img_tag }}
+            </span>
+            <span>
+                {{ 'bag_icon.svg' | asset_url | img_tag }}
+            </span>
+        </div>
+    </div>
+
+    {% include 'menu' %}
+</section>
+
+{% schema %}
+{
+"name": "Main Menu",
+"settings": [
+{
+"type": "link_list",
+"id": "main_linklist",
+"label": "Menu",
+"default": "main-menu"
+}
+]
+}
+{% endschema %}
