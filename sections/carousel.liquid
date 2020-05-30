@@ -3,7 +3,7 @@
 
         <div class="carousel">
             <div class="nav nav-left">
-                <div class="ion-chevron-left carousel-arrow-icon-left">
+                <div class="icon-chevron-left carousel-arrow-icon-left">
                     {{ 'icon-chevron-yellow-left.svg' | asset_url | img_tag }}
                 </div>
             </div>
@@ -11,13 +11,19 @@
             <ul class="carousel-content">
                 {% for product in collections.favorite.products  %}
                 <li class="slide" href="{{ product.url }}">
-
                     <img src="{{ product.featured_image | product_img_url: 'medium' }}" alt="">
-                    <span>{{ product.title }}</span>
-                    <span>{{ product.price | money }}</span>
-                    <span>{{ product.tags }}</span>
-                    <a href="#">shop now</a>
-
+                    <div class="slide--inner">
+                        <span class="fav--icon" onclick="chooseFav()"></span>
+                        <span>{{ product.title }}</span>
+                        <span>{{ product.price | money }}</span>
+                        {% if product.tags != blank %}
+                        <span>{{ product.tags }}</span>
+                        {% endif %}
+                        {% if product.tags == blank %}
+                        <span>&nbsp;</span>
+                        {% endif %}
+                        <a href="#">shop now</a>
+                    </div>
                 </li>
                 {% endfor %}
             </ul>

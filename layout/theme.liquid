@@ -31,15 +31,22 @@
 <body>
   {% section 'header' %}
   {% section 'hero' %}
-  <h1 class="section--title">New In</h1>
+  <h1 class="section--title"><span>New in</span></h1>
   {% section 'carousel' %}
   {{ content_for_layout }}
-  <h1 class="section--title">Best Sellers</h1>
+  <h1 class="section--title"><span>Best sellers</span></h1>
   {% section 'bestsellers' %}
   {% section 'footer' %}
 
   {{ 'sticky.js' | asset_url | script_tag }}
   {{ 'carousel.js' | asset_url | script_tag }}
   <script src="../assets/carousel.js"></script>
+  <script>
+    function chooseFav() {
+      var favIcon = document.querySelector(".fav--icon");
+      favIcon.classList.toggle("fav--icon-solid");
+      console.log("Kliknuo...!!!")
+    }
+  </script>
 </body>
 </html>

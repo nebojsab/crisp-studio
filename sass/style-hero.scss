@@ -14,10 +14,13 @@
     height: 112px;
     width: 100%;
     display: flex;
+    margin-top: -5px;
     align-items: center;
     justify-content: center;
     color: #000;
     font-size: 22px;
     font-weight: 700;
     background-color: $yellow;
+    text-transform: uppercase;
+    font-family: $work-sans-regular;
 }

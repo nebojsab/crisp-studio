@@ -1,31 +1,32 @@
 <section id="header" class="header">
-    <div class="header--top">
+    
+    <nav class="header--top">
+        <!-- prvi deo: SEARCH -->
         <div class="header--top--item">
             <input type="text" placeholder="Search" />
         </div>
 
+        <!-- drugi deo: LOGO -->
         <div class="header--top--item">
-            <a href="#">
+            <a href="#" class="logo">
                 <!-- replace logo here -->
-                {{ 'LOGO.svg' | asset_url | img_tag }}
+                {{ 'icon-logo.svg' | asset_url | img_tag }}
             </a>
         </div>
+
+        <!-- treci deo: LINKOVI i ikone -->
         <div class="header--top--item">
             <ul>
                 <li><a href="#">Register</a></li>
-                <span> | </span>
                 <li><a href="#">My Account</a></li>
+                <li><a href="#"><span>{{ 'icon-wishlist.svg' | asset_url | img_tag }}</span></a></li>
+                <li><a href="#"><span>{{ 'icon-shopping-bag.svg' | asset_url | img_tag }}</span></a></li>
             </ul>
-            <span>
-                {{ 'WISHLIST_ICON.svg' | asset_url | img_tag }}
-            </span>
-            <span>
-                {{ 'bag_icon.svg' | asset_url | img_tag }}
-            </span>
         </div>
-    </div>
+    </nav>
 
     {% include 'menu' %}
+
 </section>
 
 {% schema %}

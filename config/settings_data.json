@@ -5,6 +5,8 @@
     "use_logo": false,
     "hero_img": "shopify:\/\/shop_images\/Screen_Shot_2018-05-24_at_09.45.24_2_2x_a0d87abe-d72a-45c0-b9b2-5849e07675e4.png",
     "yellow_bar": "What we are shopping now",
+    "new_items_bar": "New Items",
+    "best_sellers_bar": "Best Sellers",
     "checkout_header_image": "",
     "checkout_use_storefront_logo": false,
     "checkout_logo_image": "",
@@ -33,6 +35,10 @@
       },
       "hero": {
         "type": "hero",
+        "settings": {}
+      },
+      "carousel": {
+        "type": "carousel",
         "settings": {}
       }
     },
