@@ -103,3 +103,13 @@
         }
     }
 }
+
+.shopify-challenge__container {
+    position: fixed;
+    top: 50%;
+    left: calc(50% - 176px);
+    z-index: 100;
+    padding: 30px;
+    border-radius: 8px;
+    background-color: $white;
+}
