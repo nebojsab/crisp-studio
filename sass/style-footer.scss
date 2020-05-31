@@ -1,0 +1,105 @@
+.footer {
+    width: 100%;
+    background-color: $yellow;
+    font-family: $work-sans-regular;
+    color: $black;
+    padding: 0 100px;
+
+    @include breakpoint(xs) {
+        padding: 0 30px;
+    }
+
+    @include breakpoint(sm) {
+        padding: 0 30px;
+    }
+
+    @include breakpoint(md) {
+        padding: 0 30px;
+    }
+
+    &--inner {
+        max-width: 1600px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 50px 0;
+        display: flex;
+        justify-content: space-between;
+
+        @include breakpoint(xs) {
+            flex-direction: column;
+        }
+
+        @include breakpoint(sm) {
+            flex-direction: column;
+        }
+    }
+
+    .footer--nav {
+
+        .footer--logo {
+            img {
+                width: 200px;
+                margin-bottom: 50px;
+            }
+        }
+
+        .footer--menu-list {
+            list-style: none;
+            display: flex;
+            padding: 0;
+
+            @include breakpoint(xs) {
+                flex-direction: column;
+                margin-bottom: 60px;
+                line-height: 60px;
+            }
+
+            @include breakpoint(md) {
+                flex-wrap: wrap;
+                line-height: 60px;
+            }
+
+            &--item {
+                margin: 0 60px 0 0;
+                font-size: 16px;
+                text-transform: uppercase;
+            }
+        }
+    }
+
+    .footer--newsletter {
+        display: flex;
+        flex-direction: column;
+
+        .newsletter--msg {
+            font-size: 16px;
+            text-transform: uppercase;
+
+            &-success {
+                font-weight: 700;
+            }
+        }
+
+        .form--group input[type=email] {
+            border: none;
+            max-width: 500px;
+            width: 100%;
+            height: 40px;
+            line-height: 40px;
+            border-radius: 0;
+            padding: 0 10px;
+            overflow: hidden;
+        }
+
+        .form--group.label {
+            margin: 15px 0;
+        }
+
+        .button-transparent {
+            border: none;
+            background-color: transparent;
+            font-size: 16px;
+            text-transform: uppercase;
+        }
+    }
+}

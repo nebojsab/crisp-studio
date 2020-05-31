@@ -1,0 +1,35 @@
+<footer class="footer">
+    <section class="footer--inner">
+        <section class="footer--nav">
+            <div class="footer--logo">{{ 'icon-logo.svg' | asset_url | img_tag }}</div>
+            <ul class="footer--menu-list">
+                <li class="footer--menu-list--item">about</li>
+                <li class="footer--menu-list--item">terms and conditions</li>
+                <li class="footer--menu-list--item">privacy policy</li>
+                <li class="footer--menu-list--item">contact us</li>
+            </ul>
+        </section>
+        <section class="footer--newsletter">
+            {% form 'contact' %}
+                {% if form.posted.successfully? %}
+                <p class="newsletter--msg newsletter--msg-success">Thanks for your submittion!</p>
+                {% else %}
+                <p class="newsletter--msg">signup for our newsletter</p>
+                {% endif %}
+                <div class="form--group">
+                    <input type="email" class="form--control" name="contact[email]" id="email">
+                </div>
+                <div class="form--group label"><input type="checkbox" id="myCheck"><label for="myCheck"></label>GDPR tick box</label></div>
+                <div>
+                    <input type="submit" id="newsSubmit" disabled class="button button-transparent" value="submit >">
+                </div>
+            {% endform %}
+        </section>
+    </section>
+</footer>
+
+{% javascript %}
+document.getElementById('myCheck').onchange = function() {
+    document.getElementById('newsSubmit').disabled = !this.checked;
+};
+{% endjavascript %}
