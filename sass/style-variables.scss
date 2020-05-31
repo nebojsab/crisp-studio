@@ -8,25 +8,29 @@ $yellow: #e0ff04;
 
 // Fonts
 
+// $font-weight-light: 300;
+$font-weight-regular: 400;
+// $font-weight-semibold: 500;
+$font-weight-bold: 700;
+
 /**
 *   WORK SANS FONT
-*  text
 */
-// @font-face {
-//     font-family: 'Work Sans';
-//     font-style: normal;
-//     font-weight: normal;
-//     font-weight: 400;
-//     src: url('{{ "WorkSans-Regular.eot" | asset_url }}');
-//     src: url('{{ "WorkSans-Regular.eot" | asset_url }} ?#iefix') format("embedded-opentype"),
-//          url('{{ "WorkSans-Regular.woff" | asset_url }}') format("woff"),
-//          url('{{ "WorkSans-Regular.woff2" | asset_url }}') format("woff2"),
-//          url('{{ "WorkSans-Regular.ttf" | asset_url }}') format("truetype"),
-//          url('{{ "WorkSans-Regular.svg" | asset_url }} #FONT') format("svg");
-// }
-// $work-sans-regular: 'Work Sans';
-@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400&display=swap");
-$work-sans-regular: "Work Sans";
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;700&display=swap");
+
+$work-sans: "Work Sans";
+
+%work-sans {
+    font-family: $work-sans;
+
+    &-regular {
+        font-weight: $font-weight-regular;
+    }
+
+    &-bold {
+        font-weight: $font-weight-bold;
+    }
+}
 
 /**
 *  FONT AWESOME

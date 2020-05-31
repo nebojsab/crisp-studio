@@ -1,13 +1,68 @@
 .hero {
     position: relative;
+    padding-top: 180px; // dok se ne vidi tacno koliko px
+
+    @include breakpoint(xs) {
+        padding-top: 70px;
+    }
+
+    @include breakpoint(sm) {
+        padding-top: 70px;
+    }
+
+    @include breakpoint(md) {
+        padding-top: 70px;
+    }
 }
 
 .hero--cta {
     position: absolute;
     left: 50%;
-    margin-top: 333px;
+    top: calc(30% + 180px);
     display: flex;
     flex-direction: column;
+
+    @include breakpoint(xs) {        
+        top: calc(30% + 70px);
+    }
+
+    @include breakpoint(sm) {
+        top: calc(30% + 70px);
+    }
+
+    @include breakpoint(md) {
+        top: calc(30% + 70px);
+    }
+}
+
+.hero--link {
+    font-size: 16px;
+    text-transform: uppercase;
+    color: $white !important;
+    align-self: flex-end;
+
+    span img {
+        width: 13px;
+    }
+}
+
+.hero--logo {
+    img {
+        max-width: 500px;
+        width: 100%;
+        
+        @include breakpoint(xs) {        
+            max-width: 175px;
+        }
+    
+        @include breakpoint(sm) {     
+            max-width: 175px;
+        }
+    
+        @include breakpoint(md) {     
+            max-width: 175px;
+        }
+    }
 }
 
 .yellow--bar {
@@ -22,5 +77,5 @@
     font-weight: 700;
     background-color: $yellow;
     text-transform: uppercase;
-    font-family: $work-sans-regular;
+    font-family: $work-sans;
 }

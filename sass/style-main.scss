@@ -5,7 +5,27 @@ body {
 }
 
 body {
-    height: 2000px;
+    padding: 0;
+    margin: 0;
+    font-family: $work-sans;
+}
+
+ul, li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+
+    &:active {
+        color: $black;
+    }
+
+    &:visited {
+        color: $black;
+    }
 }
 
 *,

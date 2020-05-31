@@ -3,7 +3,9 @@
     <nav class="header--top">
         <!-- prvi deo: SEARCH -->
         <div class="header--top--item">
-            <input type="text" placeholder="Search" />
+            <div class="input--search">
+                <input type="text" id="search" />
+            </div>
         </div>
 
         <!-- drugi deo: LOGO -->
@@ -17,8 +19,9 @@
         <!-- treci deo: LINKOVI i ikone -->
         <div class="header--top--item">
             <ul>
-                <li><a href="#">Register</a></li>
-                <li><a href="#">My Account</a></li>
+                <li class="top--nav--account-links"><a href="#">Register</a></li>
+                <li class="top--nav--account-links"><span>&nbsp;|&nbsp;</span></li>
+                <li class="top--nav--account-links"><a href="#">My Account</a></li>
                 <li><a href="#"><span>{{ 'icon-wishlist.svg' | asset_url | img_tag }}</span></a></li>
                 <li><a href="#"><span>{{ 'icon-shopping-bag.svg' | asset_url | img_tag }}</span></a></li>
             </ul>
