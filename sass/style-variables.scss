@@ -1,10 +1,10 @@
-// Colors 
+// Colors
 
 $white: #fff;
 $black: #000;
 $gray: #999;
 $gray-icons: #bbb;
-$yellow: #E0FF04;
+$yellow: #e0ff04;
 
 // Fonts
 
@@ -16,7 +16,7 @@ $yellow: #E0FF04;
 //     font-family: 'Work Sans';
 //     font-style: normal;
 //     font-weight: normal;
-//     font-weight: 400; 
+//     font-weight: 400;
 //     src: url('{{ "WorkSans-Regular.eot" | asset_url }}');
 //     src: url('{{ "WorkSans-Regular.eot" | asset_url }} ?#iefix') format("embedded-opentype"),
 //          url('{{ "WorkSans-Regular.woff" | asset_url }}') format("woff"),
@@ -25,37 +25,57 @@ $yellow: #E0FF04;
 //          url('{{ "WorkSans-Regular.svg" | asset_url }} #FONT') format("svg");
 // }
 // $work-sans-regular: 'Work Sans';
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400&display=swap');
-$work-sans-regular: 'Work Sans';
-
-
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400&display=swap");
+$work-sans-regular: "Work Sans";
 
 /**
 *  FONT AWESOME
 *  icons
 */
 @font-face {
-    font-family: 'Font Awesome\ 5 Regular';
+    font-family: "Font Awesome\ 5 Regular";
     font-style: normal;
-    font-weight: normal; 
+    font-weight: normal;
     src: url('{{ "fa-regular-400.eot." | asset_url }}');
     src: url('{{ "fa-regular-400.eot" | asset_url }} ?#iefix') format("embedded-opentype"),
-         url('{{ "fa-regular-400.woff" | asset_url }}') format("woff"),
-         url('{{ "fa-regular-400.woff2" | asset_url }}') format("woff2"),
-         url('{{ "fa-regular-400.ttf" | asset_url }}') format("truetype"),
-         url('{{ "fa-regular-400.svg" | asset_url }} #FONT') format("svg");
+        url('{{ "fa-regular-400.woff" | asset_url }}') format("woff"),
+        url('{{ "fa-regular-400.woff2" | asset_url }}') format("woff2"),
+        url('{{ "fa-regular-400.ttf" | asset_url }}') format("truetype"),
+        url('{{ "fa-regular-400.svg" | asset_url }} #FONT') format("svg");
 }
-$font-awesome-regular: 'Font Awesome\ 5 Free';
+$font-awesome-regular: "Font Awesome\ 5 Free";
 
 @font-face {
-    font-family: 'Font Awesome\ 5 Solid';
+    font-family: "Font Awesome\ 5 Solid";
     font-style: normal;
-    font-weight: normal; 
+    font-weight: normal;
     src: url('{{ "fa-solid-900.eot" | asset_url }}');
     src: url('{{ "fa-solid-900.eot" | asset_url }} ?#iefix') format("embedded-opentype"),
-         url('{{ "fa-solid-900.woff" | asset_url }}') format("woff"),
-         url('{{ "fa-solid-900.woff2" | asset_url }}') format("woff2"),
-         url('{{ "fa-solid-900.ttf" | asset_url }}') format("truetype"),
-         url('{{ "fa-solid-900.svg" | asset_url }} #FONT') format("svg");
+        url('{{ "fa-solid-900.woff" | asset_url }}') format("woff"),
+        url('{{ "fa-solid-900.woff2" | asset_url }}') format("woff2"),
+        url('{{ "fa-solid-900.ttf" | asset_url }}') format("truetype"),
+        url('{{ "fa-solid-900.svg" | asset_url }} #FONT') format("svg");
 }
-$font-awesome-solid: 'Font Awesome\ 5 Free';
+$font-awesome-solid: "Font Awesome\ 5 Free";
+
+@mixin breakpoint($class) {
+    @if $class == lg {
+        @media (min-width: 1200px) {
+            @content;
+        }
+    } @else if $class == md {
+        @media (min-width: 769px) and (max-width: 1199px) {
+            @content;
+        }
+    } @else if $class == sm {
+        @media (min-width: 601px) and (max-width: 768px) {
+            @content;
+        }
+    } @else if $class == xs {
+        @media (max-width: 600px) {
+            @content;
+        }
+    } @else {
+        @warn "Breakpoint mixin supports: xs, sm, md, lg";
+    }
+}
