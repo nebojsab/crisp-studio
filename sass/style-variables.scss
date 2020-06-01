@@ -37,7 +37,7 @@ $work-sans: "Work Sans";
 *  icons
 */
 @font-face {
-    font-family: "Font Awesome\ 5 Regular";
+    font-family: "FontAwesome5Free";
     font-style: normal;
     font-weight: normal;
     src: url('{{ "fa-regular-400.eot." | asset_url }}');
@@ -47,10 +47,10 @@ $work-sans: "Work Sans";
         url('{{ "fa-regular-400.ttf" | asset_url }}') format("truetype"),
         url('{{ "fa-regular-400.svg" | asset_url }} #FONT') format("svg");
 }
-$font-awesome-regular: "Font Awesome\ 5 Free";
+$font-awesome-regular: "FontAwesome5Free";
 
 @font-face {
-    font-family: "Font Awesome\ 5 Solid";
+    font-family: "FontAwesome5Free-Solid";
     font-style: normal;
     font-weight: normal;
     src: url('{{ "fa-solid-900.eot" | asset_url }}');
@@ -60,7 +60,27 @@ $font-awesome-regular: "Font Awesome\ 5 Free";
         url('{{ "fa-solid-900.ttf" | asset_url }}') format("truetype"),
         url('{{ "fa-solid-900.svg" | asset_url }} #FONT') format("svg");
 }
-$font-awesome-solid: "Font Awesome\ 5 Free";
+$font-awesome-solid: "FontAwesome5Free-Solid";
+
+@import "_variables";
+
+@font-face {
+    font-family: "Font Awesome 5 Free";
+    font-style: normal;
+    font-weight: 400;
+    font-display: $fa-font-display;
+    src: url("../assets/fa-regular-400.eot");
+    src: url("../assets/fa-regular-400.eot?#iefix") format("embedded-opentype"),
+        url("../assets/fa-regular-400.woff2") format("woff2"),
+        url("../assets/fa-regular-400.woff") format("woff"),
+        url("../assets/fa-regular-400.ttf") format("truetype"),
+        url("../assets/fa-regular-400.svg#fontawesome") format("svg");
+}
+
+.far {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 400;
+}
 
 @mixin breakpoint($class) {
     @if $class == lg {

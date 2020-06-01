@@ -27,7 +27,7 @@
 
   <link rel="canonical" href="{{ canonical_url }}" />
   <meta name="viewport" content="width=device-width" />
-
+  <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
   {{ 'styles.scss' | asset_url | stylesheet_tag }}
 
 </head>
@@ -44,9 +44,9 @@
   {% section "instagram" %}
   {% section 'footer' %}
 
-  {{ 'sticky.js' | asset_url | script_tag }}
+  {{ 'header.js' | asset_url | script_tag }}
   {{ 'carousel.js' | asset_url | script_tag }}
-  <script src="../assets/header.js"></script>
+  <script src="../assets/carousel.js"></script>
   <script>
     function classToggle() {
       this.classList.toggle('is-clicked');
@@ -55,11 +55,28 @@
     document.querySelector('#nav--toggle').addEventListener('click', classToggle);
   </script>
   <script>
-    function classToggleFav() {
-      this.classList.toggle('solid');
-      this.classList.toggle('');
+    // Get a list of all svg elements
+    icons = document.querySelectorAll('.icon--fav');
+
+    // Cycle through list
+    for (let i = 0; i < icons.length; i++) {
+      icons[i].addEventListener('click', function (event) {
+        event.preventDefault();
+
+        let icon = this;
+        let currentClass = icon.getAttribute('class'); // The starting class
+
+        console.log(icon);
+
+        if (currentClass.indexOf('solid') > -1) {
+          // Remove .active
+          icon.setAttribute('class', currentClass.replace(' solid', ''));
+        } else {
+          // Add .active
+          icon.setAttribute('class', currentClass + ' solid');
+        }
+      }, false);
     }
-    document.querySelector('.icon--fav').addEventListener('click', classToggleFav);
   </script>
 </body>
 

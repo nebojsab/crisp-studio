@@ -100,6 +100,11 @@
     .carousel-arrow-icon-right {
         margin-left: -10px;
     }
+
+    .carousel-arrow-icon-left img {
+        margin-left: 10px;
+        margin-top: -17px;
+    }
 }
 
 // temp carousel section title rules
@@ -115,7 +120,7 @@
     width: 18px;
     height: 14px;
 
-    &-solid {
+    &.solid {
         background-image: url(../assets/icon-fav-solid.svg);
     }
 }
